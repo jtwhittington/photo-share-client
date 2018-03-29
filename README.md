@@ -30,6 +30,10 @@ Iterations
 4. [x] Adding `GITHUB_AUTH_MUTATION` ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-c3...step-c4)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/step-c4))
 5. [x] Adding Authorization Header ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-c4...step-c5)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/step-c5))
 6. [ ] Identifying the user with `ME` Query
+=======
+5. [x] Adding Authorization Header
+6. [x] Identifying the user with `ME` Query
+>>>>>>> Identifying the user with `ME` Query
 7. [ ] Refetching `ALL_USERS_QUERY`
 8. [ ] Handling Logging Out
 

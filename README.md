@@ -21,7 +21,7 @@ Iterations
 ### c. Github Authorization
 
 1. [x] Environment Variables
-2. [ ] Adding the React Router
+2. [x] Adding the React Router
 3. [ ] Obtaining the Github Code
 4. [ ] Adding `GITHUB_AUTH_MUTATION`
 5. [ ] Authorizing with Github

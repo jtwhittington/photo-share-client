@@ -1,5 +1,18 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
+import { gql } from 'apollo-boost'
+import { Mutation } from 'react-apollo'
+
+const GITHUB_AUTH_MUTATION = gql`
+    mutation authorize($code:String!) {
+        githubAuth(code:$code) {
+            token
+            user {
+                id
+            }
+        }
+    }
+`
 
 class AuthorizedUser extends Component {
 

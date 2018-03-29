@@ -24,7 +24,7 @@ Iterations
 2. [x] Adding the React Router
 3. [x] Obtaining the Github Code
 4. [x] Adding `GITHUB_AUTH_MUTATION`
-5. [ ] Authorizing with Github
+5. [x] Adding Authorization Header
 6. [ ] Identifying the user with `ME` Query
 7. [ ] Refetching `ALL_USERS_QUERY`
 8. [ ] Handling Logging Out

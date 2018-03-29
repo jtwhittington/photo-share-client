@@ -2,7 +2,7 @@ import React from 'react'
 import { gql } from 'apollo-boost'
 import { Query, Mutation } from 'react-apollo'
 
-const ALL_USERS_QUERY = gql`
+export const ALL_USERS_QUERY = gql`
     query allUsers {
         totalUsers
         allUsers {

@@ -15,9 +15,25 @@ const ALL_USERS_QUERY = gql`
 
 const Users = () => 
     <Query query={ALL_USERS_QUERY}>
-        {result => 
-            <p>Users are loading: {result.loading ? "yes" : "no"}</p>
+        {({data, loading, refetch }) => loading ?
+            <p>loading users...</p> :
+            <div>
+                <p>{data.totalUsers} Users</p>
+                <ul>
+                    {data.allUsers.map(user => 
+                        <li key={user.id}>
+                        <img src={user.avatar_url} 
+                                width={48} 
+                                height={48} 
+                                alt="" />
+                        {user.name}
+                        </li>
+                    )}
+                </ul>
+                <button onClick={() => refetch()}>Refetch Users</button>
+            </div>
+            
         }
-    </Query>
+    </Query>   
 
 export default Users

@@ -1,13 +1,24 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import { gql } from 'apollo-boost'
-import { Mutation } from 'react-apollo'
+import { Mutation, Query } from 'react-apollo'
 import { ALL_USERS_QUERY } from './Users'
 
 const GITHUB_AUTH_MUTATION = gql`
     mutation authorize($code:String!) {
         githubAuth(code:$code) {
             token
+        }
+    }
+`
+
+export const ME_QUERY = gql`
+    query me {
+        me {
+            id
+            github_login
+            name
+            avatar_url
         }
     }
 `
@@ -43,20 +54,29 @@ class AuthorizedUser extends Component {
 
     render() {
         return (
-            <Mutation mutation={GITHUB_AUTH_MUTATION} 
-                update={this.authorizationComplete}
-                refetchQueries={[{ query: ALL_USERS_QUERY }]}>
-            
-                {authorize => {
-                    this.authorize = authorize
-                    return (
-                        <button onClick={this.requestCode} disabled={this.state.signingIn}>
-                            Sign In with Github
-                        </button>  
-                    )
-                }}
-        
-            </Mutation>
+            <Query query={ME_QUERY}>
+                {({ loading, data }) => data.me ?
+                    <div>
+                        <img src={data.me.avatar_url} width={48} height={48} alt="" />
+                        <h1>{data.me.name}</h1> 
+                    </div> :
+                    <Mutation mutation={GITHUB_AUTH_MUTATION} 
+                        refetchQueries={[
+                            { query: ALL_USERS_QUERY }, 
+                            { query: ME_QUERY }
+                        ]}
+                        update={this.authorizationComplete}>
+                        {authorize => {
+                            this.authorize = authorize
+                            return (
+                                <button onClick={this.requestCode} disabled={this.state.signingIn}>
+                                    Sign In with Github
+                                </button>  
+                            )
+                        }}
+                    </Mutation>
+                }
+            </Query>
         )
     }
 

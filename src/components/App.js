@@ -1,6 +1,6 @@
 import React from 'react'
+import Users from './Users'
 
-const App = ({ client }) => 
-    <h1>TODO: Build PhotoShare App</h1>
+const App = ({ client }) => <Users />
 
 export default App

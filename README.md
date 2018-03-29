@@ -16,11 +16,11 @@ Iterations
 
 ### b. Handling Users
 
-1. [x] Add `ALL_USERS` Query ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-a2...step-b1)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/step-b1))
-2. [x] Display the User list ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-b1...step-b2)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/b2))
-3. [x] Add `ADD_FAKE_USERS` Mutation ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-b2...step-b3)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/step-b3))
-4. [x] Update the local cache with new users ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-b3...step-b4)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/step-b4))
-5. [ ] Setting the fake user count
+1. [x] Add `ALL_USERS` Query
+2. [ ] Display the User list
+3. [ ] Add `ADD_FAKE_USERS` Mutation
+4. [ ] Update the local cache with new users
+5. [ ] Sending Variables to `ADD_FAKE_USERS`
 
 ### c. Github Authorization
 

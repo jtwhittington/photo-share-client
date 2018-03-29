@@ -33,7 +33,11 @@ const Users = () =>
                 <ul>
                     {data.allUsers.map(user => 
                         <li key={user.id}>
+<<<<<<< HEAD
                         <img src={user.avatar} 
+=======
+                        <img src={user.avatar_url} 
+>>>>>>> Display the User list
                                 width={48} 
                                 height={48} 
                                 alt="" />
@@ -42,11 +46,14 @@ const Users = () =>
                     )}
                 </ul>
                 <button onClick={() => refetch()}>Refetch Users</button>
+<<<<<<< HEAD
                 <Mutation mutation={ADD_FAKE_USERS_MUTATION} variables={{ count: 1 }}>
                     {addFakeUsers => 
                         <button onClick={addFakeUsers}>Add Fake Users</button>
                     }
                 </Mutation>
+=======
+>>>>>>> Display the User list
             </div>
             
         }

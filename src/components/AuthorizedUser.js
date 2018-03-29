@@ -28,7 +28,7 @@ class AuthorizedUser extends Component {
         window.location = `https://github.com/login/oauth/authorize?client_id=${clientID}&scope=user`
     }
 
-    componentWillMount() {
+    componentDidMount() {
         const { history } = this.props
         if (window.location.search.match(/code=/)) {
             this.setState({ signingIn: true })

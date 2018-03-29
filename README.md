@@ -17,7 +17,7 @@ Iterations
 ### b. Handling Users
 
 1. [x] Add `ALL_USERS` Query
-2. [ ] Display the User list
+2. [x] Display the User list
 3. [ ] Add `ADD_FAKE_USERS` Mutation
 4. [ ] Update the local cache with new users
 5. [ ] Sending Variables to `ADD_FAKE_USERS`

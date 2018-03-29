@@ -56,11 +56,20 @@ const Users = () =>
                     )}
                 </ul>
                 <Mutation mutation={ADD_FAKE_USERS_MUTATION} 
-                    variables={{ count: 3 }}
                     update={updateLocalCache}>
-                    {addFakeUsers => 
-                        <button onClick={addFakeUsers}>Add Fake Users</button>
-                    }
+                    {addFakeUsers => {
+                        let count = 1
+                        return (
+                            <div>
+                                <input type="Number" 
+                                    defaultValue={1} 
+                                    onChange={({target}) => count = target.value} />
+                                <button onClick={() => addFakeUsers({ variables: {count}})}>
+                                    Add Fake Users
+                                </button>
+                            </div>
+                        )
+                    }}
                 </Mutation>
             </div>
             

@@ -1,13 +1,12 @@
+import React from 'react'
+import { render } from 'react-dom'
+import { ApolloProvider } from 'react-apollo'
+import App from './components/App'
 import createClient from './createClient'
-import { gql } from 'apollo-boost'
-  
-const client = createClient()
 
-const operation = {
-  query: gql`{ totalUsers, totalPhotos }`
-}
-
-client.query(operation)
-  .then(console.log)
-  .catch(console.error)
-  
+render(
+  <ApolloProvider client={createClient()}>
+    <App />
+  </ApolloProvider>,
+  document.getElementById('root')
+)  

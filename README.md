@@ -23,7 +23,7 @@ Iterations
 1. [x] Environment Variables
 2. [x] Adding the React Router
 3. [x] Obtaining the Github Code
-4. [ ] Adding `GITHUB_AUTH_MUTATION`
+4. [x] Adding `GITHUB_AUTH_MUTATION`
 5. [ ] Authorizing with Github
 6. [ ] Identifying the user with `ME` Query
 7. [ ] Refetching `ALL_USERS_QUERY`

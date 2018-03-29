@@ -19,7 +19,7 @@ Iterations
 1. [x] Add `ALL_USERS` Query
 2. [x] Display the User list
 3. [x] Add `ADD_FAKE_USERS` Mutation
-4. [ ] Update the local cache with new users
+4. [x] Update the local cache with new users
 
 ### c. Github Authorization
 

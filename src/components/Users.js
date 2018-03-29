@@ -24,9 +24,23 @@ const ADD_FAKE_USERS_MUTATION = gql`
     }
 `
 
+const updateLocalCache = (cache, { data }) => {
+    const { totalUsers, allUsers } = cache.readQuery({query: ALL_USERS_QUERY})
+    cache.writeQuery({
+        query: ALL_USERS_QUERY, 
+        data: {
+            totalUsers: totalUsers + data.addFakeUsers.length,
+            allUsers: [
+                ...allUsers,
+                ...data.addFakeUsers
+            ]
+        }
+    })
+}
+
 const Users = () => 
     <Query query={ALL_USERS_QUERY}>
-        {({data, loading, refetch }) => loading ?
+        {({data, loading }) => loading ?
             <p>loading users...</p> :
             <div>
                 <p>{data.totalUsers} Users</p>
@@ -41,8 +55,9 @@ const Users = () =>
                         </li>
                     )}
                 </ul>
-                <button onClick={() => refetch()}>Refetch Users</button>
-                <Mutation mutation={ADD_FAKE_USERS_MUTATION} variables={{ count: 1 }}>
+                <Mutation mutation={ADD_FAKE_USERS_MUTATION} 
+                    variables={{ count: 3 }}
+                    update={updateLocalCache}>
                     {addFakeUsers => 
                         <button onClick={addFakeUsers}>Add Fake Users</button>
                     }

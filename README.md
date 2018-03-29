@@ -20,6 +20,7 @@ Iterations
 2. [x] Display the User list
 3. [x] Add `ADD_FAKE_USERS` Mutation
 4. [x] Update the local cache with new users
+5. [x] Setting the fake user count
 
 ### c. Github Authorization
 

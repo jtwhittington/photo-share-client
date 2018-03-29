@@ -34,7 +34,7 @@ Iterations
 
 ### d. Incorporating Subscriptions
 
-1. [ ] Adding a WebSocket Link
+1. [x] Adding a WebSocket Link
 2. [ ] Persisting Data
 3. [ ] Subscribing to new users
 4. [ ] Updating the local cache

@@ -12,8 +12,7 @@ Iterations
 ### a. Setting up Apollo Client
 
 1. [x] Create the Apollo Client
-2. [ ] Render React Components
-3. [ ] Add the Apollo Provider
+2. [x] Render ApolloProvider
 
 ### b. Handling Users
 

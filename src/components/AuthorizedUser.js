@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import { gql } from 'apollo-boost'
-import { Mutation, Query } from 'react-apollo'
+import { Mutation, Query, withApollo, compose } from 'react-apollo'
 import { ALL_USERS_QUERY } from './Users'
 
 const GITHUB_AUTH_MUTATION = gql`
@@ -31,6 +31,7 @@ class AuthorizedUser extends Component {
             signingIn: false
         }
         this.authorizationComplete = this.authorizationComplete.bind(this)
+        this.logout = this.logout.bind(this)
     }
 
     requestCode() {
@@ -52,6 +53,17 @@ class AuthorizedUser extends Component {
         this.props.history.replace('/')
     }
 
+    logout() {
+        localStorage.removeItem('token')
+        this.props.client.writeQuery({ 
+            query: ME_QUERY,
+            data: {
+                me: null
+            } 
+        })
+        this.setState({ signingIn: false })
+    }
+
     render() {
         return (
             <Query query={ME_QUERY}>
@@ -59,6 +71,7 @@ class AuthorizedUser extends Component {
                     <div>
                         <img src={data.me.avatar} width={48} height={48} alt="" />
                         <h1>{data.me.name}</h1> 
+                        <button onClick={this.logout}>logout</button>
                     </div> :
                     <Mutation mutation={GITHUB_AUTH_MUTATION} 
                         refetchQueries={[
@@ -82,4 +95,4 @@ class AuthorizedUser extends Component {
 
 }
 
-export default withRouter(AuthorizedUser) 
+export default compose(withRouter, withApollo)(AuthorizedUser) 

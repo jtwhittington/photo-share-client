@@ -3,10 +3,10 @@ import {
     HttpLink, 
     ApolloLink,
     ApolloClient,
-    getMainDefinition,
     split 
 } from 'apollo-boost'
 import { WebSocketLink } from 'apollo-link-ws'
+import { getMainDefinition } from 'apollo-utilities'
 
 export default () => {
 
@@ -23,7 +23,7 @@ export default () => {
         return forward(operation)
     })
     const wsLink = new WebSocketLink({
-        uri: `ws://localhost:4000/subscriptions`,
+        uri: `ws://localhost:4000`,
         options: { reconnect: true }
     })
     

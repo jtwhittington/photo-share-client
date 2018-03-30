@@ -1,7 +1,8 @@
 import React from 'react'
 import { gql } from 'apollo-boost'
-import { Query } from 'react-apollo'
+import { Query, Mutation } from 'react-apollo'
 import { UserList } from './ui'
+import { ME_QUERY } from './AuthorizedUser'
 
 export const ALL_USERS_QUERY = gql`
     query allUsers {
@@ -14,10 +15,34 @@ export const ALL_USERS_QUERY = gql`
     }
 `
 
+const FAKE_LOGIN = gql`
+    mutation fakeLogin($id: ID!) {
+        fakeUserAuth(id:$id) {
+            token
+            user {
+                id
+            }
+        }
+    }
+`
+
 const Users = () => 
     <Query query={ALL_USERS_QUERY}>
         {({data, loading }) => 
-            <UserList users={data.allUsers} loading={loading} />
+            <Mutation mutation={FAKE_LOGIN} 
+                refetchQueries={[{ query: ME_QUERY }]}
+                update={(cache, {data}) => {
+                    window.localStorage.setItem('token', data.fakeUserAuth.token)
+                    window.localStorage.setItem('uid', data.fakeUserAuth.user.id)
+                }}>
+                {mutation => 
+                    <UserList users={data.allUsers} 
+                        loading={loading} 
+                        onDoubleClick={({id}) => {
+                            mutation({ variables: { id }})
+                        }} />
+                }
+            </Mutation>
         }
     </Query>   
 

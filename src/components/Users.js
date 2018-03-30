@@ -19,8 +19,8 @@ const ADD_FAKE_USERS_MUTATION = gql`
         addFakeUsers(count:$count) {
             id  
             name
-            github_login
-            avatar_url
+            githubLogin
+            avatar
         }
     }
 `

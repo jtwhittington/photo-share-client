@@ -1,11 +1,24 @@
 import React from 'react'
+import { PostPhotoForm } from './ui'
 
-const PostPhoto = ({ history }) =>
-    <div>
-        <h1>TODO: Post Photo</h1>
-        <button onClick={() => history.goBack()}>
-            Cancel
-        </button>
-    </div>
+const PostPhoto = ({ history, location }) => {
+    const photoFile = location.state && location.state.photoToUpload
+    const photoSrc = location.state && location.state.photoSrc
+    const token = localStorage.getItem('token')
+
+    if (!token) {
+        history.replace('/')
+    }
+
+    return (
+        <PostPhotoForm 
+            photoFile={photoFile} 
+            photoSrc={photoSrc} 
+            onSubmit={photo => {
+                console.log('todo: submit photo', photo)
+                history.push('/')
+            }} />
+    )
+}
 
 export default PostPhoto    

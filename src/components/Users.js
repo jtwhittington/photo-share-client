@@ -18,8 +18,8 @@ const ADD_FAKE_USERS_MUTATION = gql`
         addFakeUsers(count:$count) {
             id  
             name
-            github_login
-            avatar_url
+            githubLogin
+            avatar
         }
     }
 `
@@ -33,7 +33,7 @@ const Users = () =>
                 <ul>
                     {data.allUsers.map(user => 
                         <li key={user.id}>
-                        <img src={user.avatar_url} 
+                        <img src={user.avatar} 
                                 width={48} 
                                 height={48} 
                                 alt="" />

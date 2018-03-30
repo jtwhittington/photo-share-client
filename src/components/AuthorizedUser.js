@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom'
 import { gql } from 'apollo-boost'
 import { Mutation, Query, withApollo, compose } from 'react-apollo'
 import { ALL_USERS_QUERY } from './Users'
+import { Auth } from './ui'
 
 const GITHUB_AUTH_MUTATION = gql`
     mutation authorize($code:String!) {
@@ -67,25 +68,17 @@ class AuthorizedUser extends Component {
     render() {
         return (
             <Query query={ME_QUERY}>
-                {({ loading, data }) => data.me ?
-                    <div>
-                        <img src={data.me.avatar} width={48} height={48} alt="" />
-                        <h1>{data.me.name}</h1> 
-                        <button onClick={this.logout}>logout</button>
-                    </div> :
-                    <Mutation mutation={GITHUB_AUTH_MUTATION} 
-                        refetchQueries={[
-                            { query: ALL_USERS_QUERY }, 
-                            { query: ME_QUERY }
-                        ]}
+                {({ loading, data }) => 
+                    <Mutation mutation={GITHUB_AUTH_MUTATION}
+                        refetchQueries={[{ query: ME_QUERY }]}
                         update={this.authorizationComplete}>
                         {authorize => {
                             this.authorize = authorize
-                            return (
-                                <button onClick={this.requestCode} disabled={this.state.signingIn}>
-                                    Sign In with Github
-                                </button>  
-                            )
+                            return <Auth me={data.me} loading={loading} 
+                                clientID={process.env.REACT_APP_CLIENT_ID}
+                                signingIn={this.state.signingIn} 
+                                onSignOut={this.logout} 
+                                onPostPhotoClick={() => this.props.history.push('/newPhoto')} />
                         }}
                     </Mutation>
                 }

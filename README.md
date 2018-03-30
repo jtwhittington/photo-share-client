@@ -53,11 +53,12 @@ Iterations
 4. [x] Adding the `POST_PHOTO_MUTATION` ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-f3...step-f4)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/step-f4))
 5. [ ] Adding `ALL_PHOTOS` Query
 6. [ ] Incorporating the PhotoList UI Component
-7. [ ] Updating the Local Cache
-9. [ ] Adding Photo Subscriptions
+7. [ ] Adding Photo Subscriptions
 
 ### g. Searching, Paging, and Filtering
 
-1. [ ] Filtering all Photos
+1. [ ] Filtering all Photos by user
+2. [ ] Filtering all Photos by Category
+3. [ ] Filtering all photos by date
 2. [ ] Searching for Photos
 3. [ ] Adding Data Paging

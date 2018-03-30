@@ -14,17 +14,6 @@ export const ALL_USERS_QUERY = gql`
     }
 `
 
-const ADD_FAKE_USERS_MUTATION = gql`
-    mutation addFakeUsers($count:Int!) {
-        addFakeUsers(count:$count) {
-            id  
-            name
-            githubLogin
-            avatar
-        }
-    }
-`
-
 const Users = () => 
     <Query query={ALL_USERS_QUERY}>
         {({data, loading }) => 

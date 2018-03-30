@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "apollo-boost": "^0.1.4",
+    "apollo-cache-persist": "^0.1.1",
     "apollo-link-ws": "^1.0.7",
     "apollo-utilities": "^1.0.11",
     "graphql": "^0.13.2",

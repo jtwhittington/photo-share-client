@@ -7,8 +7,9 @@ import {
 } from 'apollo-boost'
 import { WebSocketLink } from 'apollo-link-ws'
 import { getMainDefinition } from 'apollo-utilities'
+import { persistCache } from 'apollo-cache-persist'
 
-export default () => {
+export default ({ persist=false }) => {
 
     const httpLink = new HttpLink({ uri: 'http://localhost:4000/graphql' })
     const authLink = new ApolloLink((operation, forward) => {
@@ -41,6 +42,19 @@ export default () => {
     const cache = new InMemoryCache({
         dataIdFromObject: object => object.id
     })
+
+    if (persist) {
+        persistCache({
+            cache,
+            storage: localStorage
+        })
+    
+        if (localStorage['apollo-cache-persist']) {
+            cache.restore(JSON.parse(localStorage['apollo-cache-persist']))
+        }
+    } else {
+        localStorage.removeItem('apollo-cache-persist')
+    }
 
     return new ApolloClient({link, cache})
 

@@ -16,9 +16,9 @@ export const ME_QUERY = gql`
     query me {
         me {
             id
-            github_login
+            githubLogin
             name
-            avatar_url
+            avatar
         }
     }
 `
@@ -57,7 +57,7 @@ class AuthorizedUser extends Component {
             <Query query={ME_QUERY}>
                 {({ loading, data }) => data.me ?
                     <div>
-                        <img src={data.me.avatar_url} width={48} height={48} alt="" />
+                        <img src={data.me.avatar} width={48} height={48} alt="" />
                         <h1>{data.me.name}</h1> 
                     </div> :
                     <Mutation mutation={GITHUB_AUTH_MUTATION} 

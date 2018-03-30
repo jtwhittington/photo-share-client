@@ -33,7 +33,6 @@ Iterations
 =======
 5. [x] Adding Authorization Header
 6. [x] Identifying the user with `ME` Query
->>>>>>> Identifying the user with `ME` Query
 7. [ ] Refetching `ALL_USERS_QUERY`
 8. [ ] Handling Logging Out
 

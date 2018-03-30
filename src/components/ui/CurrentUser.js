@@ -19,8 +19,8 @@ const UserDetails = styled.div`
 export const CurrentUser = ({ loading, me, onLogout=f=>f, onPostPhotoClick=f=>f }) => loading ?
   <CircularProgress color={theme.palette.accent1Color} /> :
     <UserDetails>
-      <Avatar src={me.avatar_url} />
-      <h1>{me.github_login}</h1>
+      <Avatar src={me.avatar} />
+      <h1>{me.githubLogin}</h1>
       <p>{me.name}</p>
       <FlatButton label="logout"
         labelPosition="before"

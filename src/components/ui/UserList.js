@@ -16,7 +16,7 @@ export const UserList = ({ loading=false, users=[], onClick=f=>f, onDoubleClick=
             {users.map(user => 
                 <ListItem key={user.id}
                     className="user-row" 
-                    leftAvatar={<Avatar src={user.avatar || user.avatar_url} />}
+                    leftAvatar={<Avatar src={user.avatar} />}
                     onClick={() => onClick(user)}
                     onDoubleClick={() => onDoubleClick(user)}>
                     {user.name}

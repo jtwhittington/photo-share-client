@@ -8,7 +8,7 @@ const ALL_USERS_QUERY = gql`
         allUsers {
             id
             name
-            avatar_url
+            avatar
         }
     }
 `

@@ -8,10 +8,14 @@ import {
 import { WebSocketLink } from 'apollo-link-ws'
 import { getMainDefinition } from 'apollo-utilities'
 import { persistCache } from 'apollo-cache-persist'
+import { createUploadLink } from 'apollo-upload-client'
 
 export default ({ persist=false }) => {
 
-    const httpLink = new HttpLink({ uri: 'http://localhost:4000/graphql' })
+    const httpLink = createUploadLink({
+        includeExtensions: true,
+        uri: 'http://localhost:4000/graphql'
+    })
     const authLink = new ApolloLink((operation, forward) => {
         const token = localStorage.getItem('token')
         if (token) {

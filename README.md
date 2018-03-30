@@ -47,11 +47,11 @@ Iterations
 
 ### f. Posting Photos
 
-1. [ ] Modify the `httpLink` for uploads
-2. [ ] Adding `ALL_PHOTOS` Query
-3. [ ] Routing to the Post Photo Form
-4. [ ] Incorporating the Post Photo Form
-5. [ ] Adding the `POST_PHOTO_MUTATION`
+1. [x] Modify the `httpLink` for uploads
+2. [ ] Routing to the Post Photo Form
+3. [ ] Incorporating the Post Photo Form
+4. [ ] Adding the `POST_PHOTO_MUTATION`
+5. [ ] Adding `ALL_PHOTOS` Query
 6. [ ] Incorporating the PhotoList UI Component
 7. [ ] Updating the Local Cache
 9. [ ] Adding Photo Subscriptions

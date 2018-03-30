@@ -2,8 +2,11 @@ import {
     InMemoryCache, 
     HttpLink, 
     ApolloLink,
-    ApolloClient 
+    ApolloClient,
+    getMainDefinition,
+    split 
 } from 'apollo-boost'
+import { WebSocketLink } from 'apollo-link-ws'
 
 export default () => {
 
@@ -19,8 +22,21 @@ export default () => {
         }
         return forward(operation)
     })
+    const wsLink = new WebSocketLink({
+        uri: `ws://localhost:4000/subscriptions`,
+        options: { reconnect: true }
+    })
+    
+    const httpAuthLink = authLink.concat(httpLink)
 
-    const link = authLink.concat(httpLink)
+    const link = split(
+        ({ query }) => {
+            const { kind, operation } = getMainDefinition(query)
+            return kind === 'OperationDefinition' && operation === 'subscription'
+        }, 
+        wsLink,
+        httpAuthLink
+    )
 
     const cache = new InMemoryCache({
         dataIdFromObject: object => object.id

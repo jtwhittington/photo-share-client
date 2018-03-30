@@ -23,6 +23,8 @@ const LISTEN_FOR_PHOTOS = gql`
         newPhoto {
             id
             name
+            description
+            category
             url
             created
             postedBy {

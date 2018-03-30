@@ -5,7 +5,7 @@ import App from './components/App'
 import createClient from './createClient'
 
 render(
-  <ApolloProvider client={createClient({ persist: true })}>
+  <ApolloProvider client={createClient({ persist: false })}>
     <App />
   </ApolloProvider>,
   document.getElementById('root')

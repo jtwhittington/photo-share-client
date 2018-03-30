@@ -24,20 +24,6 @@ const ADD_FAKE_USERS_MUTATION = gql`
     }
 `
 
-const updateLocalCache = (cache, { data }) => {
-    const { totalUsers, allUsers } = cache.readQuery({query: ALL_USERS_QUERY})
-    cache.writeQuery({
-        query: ALL_USERS_QUERY, 
-        data: {
-            totalUsers: totalUsers + data.addFakeUsers.length,
-            allUsers: [
-                ...allUsers,
-                ...data.addFakeUsers
-            ]
-        }
-    })
-}
-
 const Users = () => 
     <Query query={ALL_USERS_QUERY}>
         {({data, loading }) => loading ?
@@ -55,8 +41,7 @@ const Users = () =>
                         </li>
                     )}
                 </ul>
-                <Mutation mutation={ADD_FAKE_USERS_MUTATION} 
-                    update={updateLocalCache}>
+                <Mutation mutation={ADD_FAKE_USERS_MUTATION}>
                     {addFakeUsers => {
                         let count = 1
                         return (

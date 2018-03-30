@@ -4,6 +4,7 @@ import Users, { ALL_USERS_QUERY } from './Users'
 import { gql } from 'apollo-boost'
 import { withApollo } from 'react-apollo'
 import AuthorizedUser from './AuthorizedUser'
+import { UserInterface } from './ui'
 
 const LISTEN_FOR_USERS = gql`
     subscription {
@@ -14,6 +15,11 @@ const LISTEN_FOR_USERS = gql`
         }
     }
 `
+
+const Menu = () => [
+    <AuthorizedUser key="authorized-user" />,
+    <Users key="users" />
+]
 
 class App extends Component {
 
@@ -42,10 +48,9 @@ class App extends Component {
     render() {
         return (
             <BrowserRouter>
-                <div>
-                    <AuthorizedUser />
-                    <Users />
-                </div>
+                <UserInterface menu={<Menu />}>
+                    <h1>Main Content</h1>
+                </UserInterface>
             </BrowserRouter>
         )
     }

@@ -40,7 +40,7 @@ Iterations
 
 ### e. Incorporating the UI
 
-1. [ ] Incorporating the Main User Interface
+1. [x] Incorporating the Main User Interface
 2. [ ] Incorporating the UserList UI Component
 3. [ ] Adding Fake User Authorization
 4. [ ] Incorporating the Auth UI Component

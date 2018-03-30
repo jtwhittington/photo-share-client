@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Users, { ALL_USERS_QUERY } from './Users'
 import { gql } from 'apollo-boost'
 import { withApollo } from 'react-apollo'
 import AuthorizedUser from './AuthorizedUser'
+import PostPhoto from './PostPhoto'
+import Photos from './Photos'
 import { UserInterface } from './ui'
 
 const LISTEN_FOR_USERS = gql`
@@ -49,7 +51,10 @@ class App extends Component {
         return (
             <BrowserRouter>
                 <UserInterface menu={<Menu />}>
-                    <h1>Main Content</h1>
+                    <Switch>
+                        <Route exact path="/" component={Photos} />
+                        <Route path="/newPhoto" component={PostPhoto} />
+                    </Switch>
                 </UserInterface>
             </BrowserRouter>
         )

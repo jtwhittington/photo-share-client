@@ -5,6 +5,11 @@ PhotoShare Client is the main front-end  exercise for [GraphQL Workshop](https:/
 Iterations
 ---------------
 
+### Start
+
+1. [x] Starting Point ([files](https://github.com/graphqlworkshop/photo-share-client/tree/start))
+
+
 ### a. Setting up Apollo Client
 
 1. [ ] Create the Apollo Client

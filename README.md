@@ -12,7 +12,7 @@ Iterations
 
 ### a. Setting up Apollo Client
 
-1. [x] Create the Apollo Client
+1. [x] Create the Apollo Client ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/start...step-a1)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/start))
 2. [ ] Render React Components
 3. [ ] Add the Apollo Provider
 

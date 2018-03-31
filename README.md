@@ -28,7 +28,7 @@ Iterations
 2. [x] Adding the React Router ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-c1...step-c2)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/step-c2))
 3. [x] Obtaining the Github Code ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-c2...step-c3)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/step-c3))
 4. [x] Adding `GITHUB_AUTH_MUTATION` ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-c3...step-c4)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/step-c4))
-5. [ ] Adding Authorization Header
+5. [x] Adding Authorization Header ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-c4...step-c5)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/step-c5))
 6. [ ] Identifying the user with `ME` Query
 7. [ ] Refetching `ALL_USERS_QUERY`
 8. [ ] Handling Logging Out

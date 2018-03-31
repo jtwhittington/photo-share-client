@@ -40,7 +40,7 @@ Iterations
 
 ### e. Incorporating the UI
 
-1. [x] Incorporating the Main User Interface
+1. [x] Incorporating the Main User Interface ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-d3...step-e1)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/step-e1))
 2. [ ] Incorporating the UserList UI Component
 3. [ ] Adding Fake User Authorization
 4. [ ] Incorporating the Auth UI Component

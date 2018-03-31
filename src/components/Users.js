@@ -24,31 +24,6 @@ const ADD_FAKE_USERS_MUTATION = gql`
     }
 `
 
-const ADD_FAKE_USERS_MUTATION = gql`
-    mutation addFakeUsers($count:Int!) {
-        addFakeUsers(count:$count) {
-            id  
-            name
-            github_login
-            avatar_url
-        }
-    }
-`
-
-const updateLocalCache = (cache, { data }) => {
-    const { totalUsers, allUsers } = cache.readQuery({query: ALL_USERS_QUERY})
-    cache.writeQuery({
-        query: ALL_USERS_QUERY, 
-        data: {
-            totalUsers: totalUsers + data.addFakeUsers.length,
-            allUsers: [
-                ...allUsers,
-                ...data.addFakeUsers
-            ]
-        }
-    })
-}
-
 const Users = () => 
     <Query query={ALL_USERS_QUERY}>
         {({data, loading }) => loading ?

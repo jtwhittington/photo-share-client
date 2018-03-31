@@ -42,7 +42,7 @@ Iterations
 
 1. [x] Incorporating the Main User Interface ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-d3...step-e1)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/step-e1))
 2. [x] Incorporating the UserList UI Component ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-e1...step-e2)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/step-e2))
-3. [ ] Adding Fake User Authorization
+3. [x] Adding Fake User Authorization ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-e2...step-e3)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/step-e3))
 4. [ ] Incorporating the Auth UI Component
 
 ### f. Posting Photos

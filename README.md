@@ -48,7 +48,7 @@ Iterations
 ### f. Posting Photos
 
 1. [x] Modify the `httpLink` for uploads ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-e4...step-f1)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/step-f1))
-2. [ ] Routing to the Post Photo Form
+2. [x] Routing to the Post Photo Form ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-f1...step-f2)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/step-f2))
 3. [ ] Incorporating the Post Photo Form
 4. [ ] Adding the `POST_PHOTO_MUTATION`
 5. [ ] Adding `ALL_PHOTOS` Query

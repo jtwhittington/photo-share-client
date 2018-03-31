@@ -1,6 +1,5 @@
 import { 
-    InMemoryCache, 
-    HttpLink, 
+    InMemoryCache,
     ApolloLink,
     ApolloClient,
     split 

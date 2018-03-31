@@ -51,14 +51,6 @@ Iterations
 2. [x] Routing to the Post Photo Form ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-f1...step-f2)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/step-f2))
 3. [x] Incorporating the Post Photo Form ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-f2...step-f3)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/step-f3))
 4. [x] Adding the `POST_PHOTO_MUTATION` ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-f3...step-f4)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/step-f4))
-5. [ ] Adding `ALL_PHOTOS` Query
+5. [x] Adding `ALL_PHOTOS` Query ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-f4...step-f5)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/step-f5))
 6. [ ] Incorporating the PhotoList UI Component
 7. [ ] Adding Photo Subscriptions
-
-### g. Searching, Paging, and Filtering
-
-1. [ ] Filtering all Photos by user
-2. [ ] Filtering all Photos by Category
-3. [ ] Filtering all photos by date
-2. [ ] Searching for Photos
-3. [ ] Adding Data Paging

@@ -11,16 +11,16 @@ Iterations
 
 ### a. Setting up Apollo Client
 
-1. [x] Create the Apollo Client
-2. [x] Render ApolloProvider
+1. [x] Create the Apollo Client ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/start...step-a1)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/start))
+2. [x] Render ApolloProvider ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-a1...step-a2)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/step-a2))
 
 ### b. Handling Users
 
-1. [x] Add `ALL_USERS` Query
-2. [x] Display the User list
-3. [x] Add `ADD_FAKE_USERS` Mutation
-4. [x] Update the local cache with new users
-5. [x] Setting the fake user count
+1. [x] Add `ALL_USERS` Query ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-a2...step-b1)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/step-b1))
+2. [x] Display the User list ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-b1...step-b2)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/b2))
+3. [x] Add `ADD_FAKE_USERS` Mutation ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-b2...step-b3)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/step-b3))
+4. [x] Update the local cache with new users ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-b3...step-b4)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/step-b4))
+5. [x] Setting the fake user count ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-b4...step-b5)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/step-b5))
 
 ### c. Github Authorization
 

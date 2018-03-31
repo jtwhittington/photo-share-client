@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import { gql } from 'apollo-boost'
 import { Mutation, Query, withApollo, compose } from 'react-apollo'
-import { ALL_USERS_QUERY } from './Users'
 import { Auth } from './ui'
 
 const GITHUB_AUTH_MUTATION = gql`

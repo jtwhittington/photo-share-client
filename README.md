@@ -34,7 +34,7 @@ Iterations
 
 ### d. Incorporating Subscriptions
 
-1. [x] Adding a WebSocket Link
+1. [x] Adding a WebSocket Link ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-c7...step-d1)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/d1))
 2. [ ] Persisting Data
 3. [ ] Subscribing to new users
 4. [ ] Updating the local cache

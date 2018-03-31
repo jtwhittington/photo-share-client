@@ -50,7 +50,7 @@ Iterations
 1. [x] Modify the `httpLink` for uploads ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-e4...step-f1)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/step-f1))
 2. [x] Routing to the Post Photo Form ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-f1...step-f2)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/step-f2))
 3. [x] Incorporating the Post Photo Form ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-f2...step-f3)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/step-f3))
-4. [ ] Adding the `POST_PHOTO_MUTATION`
+4. [x] Adding the `POST_PHOTO_MUTATION` ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-f3...step-f4)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/step-f4))
 5. [ ] Adding `ALL_PHOTOS` Query
 6. [ ] Incorporating the PhotoList UI Component
 7. [ ] Updating the Local Cache

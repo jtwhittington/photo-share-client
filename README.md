@@ -26,7 +26,7 @@ Iterations
 
 1. [x] Environment Variables ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-b5...step-c1)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/step-c1))
 2. [x] Adding the React Router ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-c1...step-c2)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/step-c2))
-3. [ ] Obtaining the Github Code
+3. [x] Obtaining the Github Code ([diff](https://github.com/graphqlworkshop/photo-share-client/compare/step-c2...step-c3)) ([files](https://github.com/graphqlworkshop/photo-share-client/tree/step-c3))
 4. [ ] Adding `GITHUB_AUTH_MUTATION`
 5. [ ] Authorizing with Github
 6. [ ] Identifying the user with `ME` Query

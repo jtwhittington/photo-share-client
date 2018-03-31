@@ -22,7 +22,7 @@ const Users = () =>
                 <ul>
                     {data.allUsers.map(user => 
                         <li key={user.id}>
-                        <img src={user.avatar_url} 
+                        <img src={user.avatar} 
                                 width={48} 
                                 height={48} 
                                 alt="" />

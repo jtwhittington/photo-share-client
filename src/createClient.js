@@ -27,7 +27,7 @@ export default ({ persist=false }) => {
         return forward(operation)
     })
     const wsLink = new WebSocketLink({
-        uri: `ws://localhost:4000`,
+        uri: `ws://localhost:4000/subscriptions`,
         options: { reconnect: true }
     })
     

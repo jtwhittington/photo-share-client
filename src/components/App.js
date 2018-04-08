@@ -48,7 +48,7 @@ class App extends Component {
     }
 
     subscribeToUsers(client) {
-        client.subscribe({
+        this.userSubscription = client.subscribe({
             query: LISTEN_FOR_USERS
         }).subscribe(({data}) => {
             const { totalUsers, allUsers } = client.readQuery({ query: ALL_USERS_QUERY })
@@ -66,7 +66,7 @@ class App extends Component {
     }
 
     subscribeToPhotos(client) {
-        client.subscribe({
+        this.photoSubscription = client.subscribe({
             query: LISTEN_FOR_PHOTOS
         }).subscribe(({data}) => {
             const { allPhotos } = client.readQuery({ query: LIST_PHOTOS })
@@ -80,6 +80,11 @@ class App extends Component {
                 }
             })
         })
+    }
+
+    componentWillUnmount() {
+        this.unsubscribeUsers.unsubscribe()
+        this.photoSubscription.unsubscribe()
     }
 
     render() {

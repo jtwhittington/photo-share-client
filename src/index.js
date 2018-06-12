@@ -1,10 +1,10 @@
 import {request} from 'graphql-request'
-
-const query = `{ allPhotos { name }}`
-const url   = 'http://localhost:4000/graphql'
+const query = `{ hero { name __typename } }`
+const url   = 'https://mpjk0plp9.lp.gql.zone/graphql'
 
 request(url, query)
-  .then(console.log)
+  .then(({hero}) => `<h1>The hero is ${hero.name}!</h1><p>He is a ${hero.__typename}</p>`)
+  .then(text => document.body.innerHTML = text)
 
 
 // const options = {
